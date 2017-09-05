@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*開發時需要，上網站時再拿掉developer only*/
+    /* carousel 循環播放圖片 */
+    /*border: 1px solid black;*/
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #29323b;
+}
+
+
+/* 主色(primary) #29323b */
+
+
+/* 強調色(accent) #E2C0B9 */
+
+
+/* 字體顏色 #333 */
+
+
+/* general */
+
+.cv {
+    width: 700px;
+    margin: 100px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+    position: relative;
+    /*可參考對象，幾乎與static一樣*/
+    z-index: 5;
+}
+
+html {
+    position: relative;
+}
+
+.decoration-box {
+    width: 100%;
+    height: 400px;
+    background: #E2C0B9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    /*position!=0時才可以用，數字越小越前面，-1有特殊用途*/
+}
+
+.cv-header,
+.cv-body,
+.cv-footer {
+    padding: 30px 50px;
+}
+
+.cv-footer {
+    padding: 80px 50px;
+}
+
+
+/* cv-header */
+
+.cv-header {
+    background: #ccc;
+}
+
+.name {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+
+/* cv-body */
+
+.cv-body {
+    background: #fff;
+}
+
+.experience {
+    position: relative;
+    padding-top: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+.logo {
+    height: 44px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    /*絕對定位會浮起來，不會與其他東西有干涉，不會產生空白*/
+}
+
+
+/*  top bottom left eigt四種屬性  定位到某個地方需要使用 */
+
+
+/*  所有東西預設是不能定位，需要手動打開，position(預設static) */
+
+
+/* cv-footer */
+
+.cv-footer {
+    background: #29323b;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.social-link:hoover {
+    background: rgba(0, 0, 0, 0.3)/*變透明*/
+    ;
+}
+
+.social-link>i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    /*設定跟容器一樣，倍數或是幾px*/
+    text-align: center;
+}
+
+
+/* a&span是inline，讀不懂width和height 區塊元素讀得懂width和height*/
